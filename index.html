@@ -363,7 +363,7 @@
     color: #00FF00; /* Green text */
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -404,8 +404,8 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Resume</h2>
-        <p>Check My Resume <a href="resume.pdf" class="resume"><i class="bi bi-filetype-pdf"></i></a>
+        <h2>Resume <a href="resume.pdf" class="resume"><i class="bi bi-filetype-pdf"></i></a> </h2>
+        <p>Check My Resume 
         </p>
       </div>
 
@@ -536,91 +536,207 @@
     </div>
   </section><!-- End Resume Section -->
 
-<!-- ======= Projects Section ======= -->
-<section id="projects" class="projects">
-  <div class="container">
-
-    <div class="section-title">
-      <h2>projects</h2>
-      <p>My Works</p>
+  <section id="projects" class="projects">
+    <div class="container">
+  
+      <style>
+        .projects-item {
+          margin-bottom: 30px;
+        }
+  
+        .projects-wrap {
+          position: relative;
+          overflow: hidden;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+        }
+  
+        .projects-wrap img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 8px;
+          transition: transform 0.3s ease;
+        }
+  
+        .projects-wrap:hover {
+          transform: translateY(-5px);
+        }
+  
+        .portfolio-info {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background-color: rgba(0, 54, 26, 0.85); /* Green background */
+          padding: 10px;
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+          color: #fff;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+  
+        .projects-wrap:hover .portfolio-info {
+          opacity: 1;
+        }
+  
+        .portfolio-info h4 {
+          margin-bottom: 5px;
+          font-size: 18px;
+          color: #ffffff; /* White text */
+        }
+  
+        .portfolio-info .projects-links {
+          margin-top: 10px;
+        }
+  
+        .projects-links a {
+          color: #fff;
+          margin-right: 10px;
+          font-size: 20px;
+          transition: color 0.3s ease;
+        }
+  
+        .projects-links a:hover {
+          color: #ffffff; /* Orange hover color */
+        }
+  
+        .section-title {
+          text-align: left;
+          margin-bottom: 20px;
+        }
+  
+        .section-title h2 {
+          font-size: 40px;
+          font-weight: bold;
+          margin-bottom: 25px;
+          color: #18d26e; /* Green text */
+        }
+  
+        .section-title p {
+          font-size: 12px;
+          color: #ffffff;
+        }
+  
+        #projects-filters {
+          list-style: none;
+          padding: 0;
+          margin: 20px 0;
+          text-align: center;
+        }
+  
+        #projects-filters li {
+          display: inline-block;
+          margin-right: 10px;
+          cursor: pointer;
+          padding: 10px 20px;
+          background-color: #18d26e; /* Green background */
+          color: #fff;
+          border-radius: 20px;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+  
+        #projects-filters li:hover,
+        #projects-filters li.filter-active {
+          background-color: #333;
+        }
+  
+        @media (max-width: 768px) {
+          .projects-wrap {
+            box-shadow: none;
+          }
+        }
+      </style>
+  
+      <div class="section-title">
+        <h2>Projects</h2>
+        <p>Explore my latest works</p>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+         
+        </div>
+      </div>
+  
+      <div class="row projects-container">
+  
+        <!-- Project Item 1 -->
+        <div class="col-lg-4 col-md-6 projects-item filter-app">
+          <div class="projects-wrap">
+            <img src="assets/img/portfolio/slr/sign language recognition for mute and deaf.png" class="img-fluid" alt="SLR Project">
+            <div class="portfolio-info">
+              <h4>Sign Language Recognition</h4>
+              <div class="projects-links">
+                <a href="assets/img/portfolio/slr/sign language recognition for mute and deaf.png" data-gallery="projectsGallery" class="projects-lightbox" title="View Image"><i class="bx bx-plus"></i></a>
+                <a href="slr.html" class="projects-details-link" title="View Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Project Item 2 -->
+        <div class="col-lg-4 col-md-6 projects-item filter-web">
+          <div class="projects-wrap">
+            <img src="assets/img/portfolio/maze/autonomous maze solving robot.png" class="img-fluid" alt="Maze Solving Robot Project">
+            <div class="portfolio-info">
+              <h4>Autonomous Maze Solving Robot</h4>
+              <div class="projects-links">
+                <a href="assets/img/portfolio/maze/autonomous maze solving robot.png" data-gallery="projectsGallery" class="projects-lightbox" title="View Image"><i class="bx bx-plus"></i></a>
+                <a href="maze-solving-robot.html" class="projects-details-link" title="View Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Project Item 3 -->
+        <div class="col-lg-4 col-md-6 projects-item filter-app">
+          <div class="projects-wrap">
+            <img src="assets/img/portfolio/Li-Fi/LIFI.png" class="img-fluid" alt="Li-Fi Project">
+            <div class="portfolio-info">
+              <h4>Li-Fi Technology</h4>
+              <div class="projects-links">
+                <a href="assets/img/portfolio/Li-Fi/LIFI.png" data-gallery="projectsGallery" class="projects-lightbox" title="View Image"><i class="bx bx-plus"></i></a>
+                <a href="lifi.html" class="projects-details-link" title="View Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Project Item 4 -->
+        <div class="col-lg-4 col-md-6 projects-item filter-card">
+          <div class="projects-wrap">
+            <img src="assets/img/portfolio/phishing/link.png" class="img-fluid" alt="Phishing Project">
+            <div class="portfolio-info">
+              <h4>Phishing Attack Detection</h4>
+              <div class="projects-links">
+                <a href="assets/img/portfolio/phishing/link.png" data-gallery="projectsGallery" class="projects-lightbox" title="View Image"><i class="bx bx-plus"></i></a>
+                <a href="attack.html" class="projects-details-link" title="View Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Project Item 5 -->
+        <div class="col-lg-4 col-md-6 projects-item filter-web">
+          <div class="projects-wrap">
+            <img src="assets/img/portfolio/chatbot/chatbot-py.png" class="img-fluid" alt="Chatbot Project">
+            <div class="portfolio-info">
+              <h4>Python Chatbot</h4>
+              <div class="projects-links">
+                <a href="assets/img/portfolio/chatbot/chatbot-py.png" data-gallery="projectsGallery" class="projects-lightbox" title="View Image"><i class="bx bx-plus"></i></a>
+                <a href="pythonchatbot.html" class="projects-details-link" title="View Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+  
     </div>
-
-    <div class="row">
-      <div class="col-lg-12 d-flex justify-content-center">
-      </div>
-    </div>
-
-    <div class="row portfolio-container">
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <img src="assets/img/portfolio/slr/sign language recognition for mute and deaf.png" class="img-fluid" alt="slr">
-          <div class="portfolio-info">
-            <h4></h4>
-            <div class="portfolio-links">
-              <a href="assets/img/portfolio/slr/sign language recognition for mute and deaf.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a>
-              <a href="slr.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-        <div class="portfolio-wrap">
-          <img src="assets/img/portfolio/maze/autonomous maze solving robot.png" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4></h4>
-            <div class="portfolio-links">
-              <a href="assets/img/portfolio/maze/autonomous maze solving robot.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a>
-              <a href="maze-solving-robot.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <img src="assets/img/portfolio/Li-Fi/LIFI.png" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4></h4>
-            <div class="portfolio-links">
-              <a href="assets/img/portfolio/Li-Fi/LIFI.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a>
-              <a href="lifi.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-        <div class="portfolio-wrap">
-          <img src="assets/img/portfolio/phishing/link.png" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4></h4>
-            <div class="portfolio-links">
-              <a href="assets/img/portfolio/phishing/link.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a>
-              <a href="attack.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-        <div class="portfolio-wrap">
-          <img src="assets/img/portfolio/chatbot/chatbot-py.png" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4></h4>
-            <div class="portfolio-links">
-              <a href="assets/img/portfolio/chatbot/chatbot-py.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a>
-              <a href="pythonchatbot.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section><!-- End Portfolio Section -->
-
+  </section>
   
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact">
@@ -656,7 +772,6 @@
 
   </section><!-- End Contact Section -->
 
-  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
